@@ -1,0 +1,183 @@
+<!-- Estructura básica del frontend de la tienda en línea -->
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ropa Deportiva</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.icon">
+    <!-- Vinculamos la hoja de estilos -->
+</head>
+    <link rel="stylesheet" href="styles.css"> 
+<body>
+    <!-- Barra de navegación -->
+    <header>
+        <nav>
+            <h1>Mi Tienda</h1>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Hombre</a></li>
+                <li><a href="#">Mujer</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Carrito <span id="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Sección de productos -->
+    <main>
+        <aside>
+            <h2>Filtrar por</h2>
+            <label>
+                <input type="checkbox" name="category" value="Camisas"> Camisas
+            </label>
+            <label>
+                <input type="checkbox" name="category" value="Pantalones"> Pantalones
+            </label>
+            <label>
+                <input type="checkbox" name="category" value="Tenis"> Tenis
+            </label>
+            <label>
+                <input type="checkbox" name="category" value="Gorras"> Gorras
+            </label>
+        </aside>
+        
+        <section class="productos">
+            <article class="producto" onclick="openModal('Camisa Deportiva', 'camisa.jpg', '$45.000')">
+                <img src="img\camisa roja.jpg" alt="Camisa roja deportiva">
+                <h3>Camisa roja Deportiva</h3>
+                <p>$45.000</p>
+                <button class="add-to-cart">Agregar al carrito</button>
+                
+            </article>
+            <article class="producto" onclick="openModal('Camisa Deportiva', 'camisa.jpg', '$45.000')">
+                <img src="img\camisa negra.jpg" alt="Camisa negra deportiva">
+                <h3>Camisa negra Deportiva</h3>
+                <p>$55.000</p>
+                <button class="add-to-cart">Agregar al carrito</button>
+                
+            </article>
+            <article class="producto" onclick="openModal('Camisa Deportiva', 'camisa.jpg', '$45.000')">
+                <img src="img\camisa azul.jpg" alt="Camisa azul deportiva">
+                <h3>Camisa azul deportiva</h3>
+                <p>$40.000</p>
+                <button class="add-to-cart">Agregar al carrito</button>
+                
+            </article>
+            <article class="producto" onclick="openModal('Pantalon Deportiva', 'camisa.jpg', '$45.000')">
+                <img src="img\Pantalon negro.jpg" alt="Pantalon deportiva">
+                <h3>Pantalon Deportiva Negro</h3>
+                <p>$45.000</p>
+                <button class="add-to-cart">Agregar al carrito</button>
+                
+            </article>
+            <article class="producto" onclick="openModal('Pantalon Deportiva', 'camisa.jpg', '$45.000')">
+                <img src="img\Pantalon azul.jpg" alt="Pantalon deportiva">
+                <h3>Pantalon Deportiva azul</h3>
+                <p>$45.000</p>
+                <button class="add-to-cart">Agregar al carrito</button>
+                
+            </article>
+            <article class="producto" onclick="openModal('Pantalon deportiva', 'camisa.jpg', '$45.000')">
+                <img src="img\Pantalon gris.jpg" alt="Pantalon deportiva">
+                <h3>Pantalon Deportiva Gris</h3>
+                <p>$45.000</p>
+                <button class="add-to-cart">Agregar al carrito</button>
+                
+            </article>
+
+            <article class="producto">
+                <img src="img/camisa roja.jpg" alt="Camisa roja deportiva">
+                <h3>Camisa roja Deportiva</h3>
+                <p>$45.000</p>
+                <button onclick="agregarAlCarrito('Camisa roja Deportiva', 'img/camisa roja.jpg', '45.000')">Agregar al carrito</button>
+            </article>
+            
+        </section>
+    </main>
+    
+    <!-- Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <img id="modal-image" src="" alt="">
+            <p id="modal-price"></p>
+        </div>
+    </div>
+    
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-top">
+            <h2>ÚNETE A <span class="highlight">MI TIENDA</span> Y OBTÉN <br> 200 PUNTOS DE BIENVENIDA</h2>
+            <p> Sé parte de la comunidad que te premia. Acumula puntos y gana beneficios exclusivos.</p>
+            <button class="register-btn">REGÍSTRATE GRATIS</button>
+        </div>
+
+        <div class="footer-middle">
+            <div class="footer-column">
+                <h3>¿NECESITAS AYUDA?</h3>
+                <ul>
+                    <li><a href="#">Políticas de privacidad</a></li>
+                    <li><a href="#">T&C - Servicio General</a></li>
+                    <li><a href="#">T&C - Promociones</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>SOBRE NOSOTROS</h3>
+                <ul>
+                    <li><a href="#">¿Quiénes somos?</a></li>
+                    <li><a href="#">¿Qué es <span class="highlight">MI TIENDA</span>?</a></li>
+                    <li><a href="#">Síguenos en <b>Facebook</b></a></li>
+                    <li><a href="#">Looks <b>Instagram</b></a></li>
+                    <li><a href="#">Música en <b>YouTube</b></a></li>
+                    <li><a href="#">Guía de tallas</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>NUESTRAS MARCAS CASTÑAS</h3>
+                <ul>
+                    <li><a href="#">AJA Y QUE  LA QUITA Y PON</a></li>
+                    <li><a href="#"> ECHE QUE LA DE SIEMPRE</a></li>
+                    <li><a href="#">LOGIN NOJODA</a></li>
+                    <li><a href="#">MIRA TU ESA VAINA LA UNIQUEÑA</a></li>
+                    <li><a href="#"><b>EDA MAMI QUE VACANA</b></a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>NUESTRAS CATEGORÍAS</h3>
+                <ul>
+                    <li><a href="#">Nuevos</a></li>
+                    <li><a href="#">Mujer</a></li>
+                    <li><a href="#">Hombre</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">Bebés</a></li>
+                    <li><a href="#">Rebajas</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 PAGOS ONLINE</p>
+            <div class="payment-methods">
+                <img src="img/mastercard.png" alt="Mastercard">
+                <img src="img/visa.png" alt="Visa">
+                <img src="img/nequi.png" alt="Nequi">
+                <img src="img/daviplata.png" alt="Daviplata">
+                <img src="img/addi.png" alt="Addi">
+                <img src="img/pse.png" alt="pse">
+                <img src="img/TarjetaMefia.png" alt="el fiao pa dos quincena">
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
