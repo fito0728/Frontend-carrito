@@ -196,3 +196,8 @@ footer {
     height: 30px;
     width: auto;
 }
+
+a{
+    text-decoration: none;
+    color: white;
+}
