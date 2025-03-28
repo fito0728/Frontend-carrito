@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="img/favicon.icon" />
     <!-- Vinculamos la hoja de estilos -->
   </head>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style/style.css" />
   <body>
     <!-- Barra de navegación -->
     <header>
@@ -48,73 +48,91 @@
       </aside>
 
       <section class="productos">
-        <article
-          class="producto"
-          onclick="openModal('Camisa Deportiva', 'camisa.jpg', '$45.000')"
-        >
-          <img src="img\camisa roja.jpg" alt="Camisa roja deportiva" />
-          <h3>Camisa roja Deportiva</h3>
+        <article class="producto" onclick="openModal('Camisa Roja Deportiva', 'camisa roja.jpg', '$45.000')">
+          <img src="img/camisa roja.jpg" alt="Camisa roja deportiva" />
+          <h3>Camisa Roja Deportiva</h3>
           <p>$45.000</p>
-          <button class="add-to-cart"><a href="carrito.html"> Agregar al carrito</a>
-          </button>
+          <button class="add-to-cart"><a href="carrito.html">Agregar al carrito</a></button>
         </article>
-        <article
-          class="producto"
-          onclick="openModal('Camisa Deportiva', 'camisa.jpg', '$45.000')"
-        >
-          <img src="img\camisa negra.jpg" alt="Camisa negra deportiva" />
-          <h3>Camisa negra Deportiva</h3>
+      
+        <article class="producto" onclick="openModal('Camisa Negra Deportiva', 'camisa negra.jpg', '$55.000')">
+          <img src="img/camisa negra.jpg" alt="Camisa negra deportiva" />
+          <h3>Camisa Negra Deportiva</h3>
           <p>$55.000</p>
-          <button class="add-to-cart"><a href="carrito.html">Agregar al carrito</button>
+          <button class="add-to-cart"><a href="carrito.html">Agregar al carrito</a></button>
         </article>
-        <article
-          class="producto"
-          onclick="openModal('Camisa Deportiva', 'camisa.jpg', '$45.000')"
-        >
-          <img src="img\camisa azul.jpg" alt="Camisa azul deportiva" />
-          <h3>Camisa azul deportiva</h3>
-          <p>$40.000</p>
-          <button class="add-to-cart"><a href="carrito.html">Agregar al carrito</button>
-        </article>
-        <article
-          class="producto"
-          onclick="openModal('Pantalon Deportiva', 'camisa.jpg', '$45.000')"
-        >
-          <img src="img\Pantalon negro.jpg" alt="Pantalon deportiva" />
-          <h3>Pantalon Deportiva Negro</h3>
+      
+        <article class="producto" onclick="openModal('Camisa Azul Deportiva', 'camisa azul.jpg', '$45.000')">
+          <img src="img/camisa azul.jpg" alt="Camisa azul deportiva" />
+          <h3>Camisa Azul Deportiva</h3>
           <p>$45.000</p>
-          <button class="add-to-cart"><a href="carrito.html">Agregar al carrito</button>
+          <button class="add-to-cart"><a href="carrito.html">Agregar al carrito</a></button>
         </article>
-        <article
-          class="producto"
-          onclick="openModal('Pantalon Deportiva', 'camisa.jpg', '$45.000')"
-        >
-          <img src="img\Pantalon azul.jpg" alt="Pantalon deportiva" />
-          <h3>Pantalon Deportiva azul</h3>
+      
+        <article class="producto" onclick="openModal('Pantalón Negro Deportivo', 'pantalon negro.jpg', '$45.000')">
+          <img src="img/pantalon negro.jpg" alt="Pantalón negro deportivo" />
+          <h3>Pantalón Negro Deportivo</h3>
           <p>$45.000</p>
-          <button class="add-to-cart"><a href="carrito.html">Agregar al carrito</button>
+          <button class="add-to-cart"><a href="carrito.html">Agregar al carrito</a></button>
         </article>
-        <article
-          class="producto"
-          onclick="openModal('Pantalon deportiva', 'camisa.jpg', '$45.000')"
-        >
-          <img src="img\Pantalon gris.jpg" alt="Pantalon deportiva" />
-          <h3>Pantalon Deportiva Gris</h3>
+      
+        <article class="producto" onclick="openModal('Pantalón Azul Deportivo', 'pantalon azul.jpg', '$45.000')">
+          <img src="img/pantalon azul.jpg" alt="Pantalón azul deportivo" />
+          <h3>Pantalón Azul Deportivo</h3>
           <p>$45.000</p>
-          <button class="add-to-cart"><a href="carrito.html">Agregar al carrito</button>
+          <button class="add-to-cart"><a href="carrito.html">Agregar al carrito</a></button>
+        </article>
+      
+        <article class="producto" onclick="openModal('Pantalón Gris Deportivo', 'pantalon gris.jpg', '$45.000')">
+          <img src="img/pantalon gris.jpg" alt="Pantalón gris deportivo" />
+          <h3>Pantalón Gris Deportivo</h3>
+          <p>$45.000</p>
+          <button class="add-to-cart"><a href="carrito.html">Agregar al carrito</a></button>
+        </article>
+      
+        <article class="producto">
+          <img src="img/tenis blanco.jpg" alt="tenis blanco deportiva" />
+          <h3>tenis blanco Deportiva</h3>
+          <p>$45.000</p>
+          <button onclick="agregarAlCarrito('tenis Roja Deportiva', 'img/tenis blanco.jpg', '45.000')">Agregar al carrito</button>
         </article>
 
         <article class="producto">
-          <img src="img/camisa roja.jpg" alt="Camisa roja deportiva" />
-          <h3>Camisa roja Deportiva</h3>
+          <img src="img/tenis negros.jpg" alt="tenis roja deportiva" />
+          <h3>tenis negros Deportiva</h3>
           <p>$45.000</p>
-          <button
-            onclick="agregarAlCarrito('Camisa roja Deportiva', 'img/camisa roja.jpg', '45.000')"
-          >
-            Agregar al carrito
-          </button>
+          <button onclick="agregarAlCarrito('Gorra Roja Deportiva', 'img/gorra negros.jpg', '45.000')">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+          <img src="img/tenis rojos.jpg" alt="tenis rojos deportiva" />
+          <h3>Tenis rojos Deportiva</h3>
+          <p>$45.000</p>
+          <button onclick="agregarAlCarrito('Gorra Roja Deportiva', 'img/gorra rojos.jpg', '45.000')">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+          <img src="img/gorra roja.jpg" alt="Gorra roja deportiva" />
+          <h3>Gorra Roja Deportiva</h3>
+          <p>$45.000</p>
+          <button onclick="agregarAlCarrito('Gorra Roja Deportiva', 'img/gorra roja.jpg', '45.000')">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+          <img src="img/gorra negra.jpg" alt="Gorra negra deportiva" />
+          <h3>Gorra negra Deportiva</h3>
+          <p>$45.000</p>
+          <button onclick="agregarAlCarrito('Gorra negra Deportiva', 'img/gorra negra.jpg', '45.000')">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+          <img src="img/gorra azul.jpg" alt="Gorra azul deportiva" />
+          <h3>Gorra azul Deportiva</h3>
+          <p>$45.000</p>
+          <button onclick="agregarAlCarrito('Gorra Roja Deportiva', 'img/gorra azul.jpg', '45.000')">Agregar al carrito</button>
         </article>
       </section>
+      
     </main>
 
     <!-- Modal -->
