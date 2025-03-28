@@ -1,55 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carrito de Compras</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <h1>Carrito</h1>
-            <a href="index.html">Volver a la tienda</a>
-        </nav>
+      <nav>
+        <h1>Carrito</h1>
+        <a href="index.html">Volver a la tienda</a>
+      </nav>
     </header>
 
     <main>
-        <h2>Detalles del Producto</h2>
-        <div id="producto-detalle">
-           <img src="img\camisa roja.jpg" alt="Camisa roja deportiva">
-            <h3 id="producto-nombre"></h3>
-            <p id="producto-precio"></p>
-            <label for="tallas">Talla:</label>
-            <select id="tallas">
-                <option>S</option>
-                <option>M</option>
-                <option>L</option>
-                <option>XL</option>
-            </select>
-            <label for="colores">Color:</label>
-            <select id="colores">
-                <option>Rojo</option>
-                <option>Negro</option>
-                <option>Azul</option>
-                <option>Gris</option>
-            </select>
-            <button onclick="finalizarCompra()">Finalizar Compra</button>
-        </div>
+      <h2>Detalles del Producto</h2>
+      <div id="producto-detalle">
+        <img src="img\camisa roja.jpg" alt="Camisa roja deportiva" />
+        <h3 id="producto-nombre"></h3>
+        <p id="producto-precio"></p>
+        <label for="tallas">Talla:</label>
+        <select id="tallas">
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+          <option>XL</option>
+        </select>
+        <label for="colores">Color:</label>
+        <select id="colores">
+          <option>Rojo</option>
+          <!--<option>Negro</option>-->
+          <!-- <option>Azul</option> -->
+          <!--<option>Gris</option>-->
+        </select>
+        <button onclick="finalizarCompra()">Finalizar Compra</button>
+      </div>
+      <div id="producto-detalle">
+        <img src="img\camisa azul.jpg" alt="Camisa azul deportiva" />
+        <h3 id="producto-nombre"></h3>
+        <p id="producto-precio"></p>
+        <label for="tallas">Talla:</label>
+        <select id="tallas">
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+          <option>XL</option>
+        </select>
+        <label for="colores">Color:</label>
+        <select id="colores">
+          <!--<option>Rojo</option>-->
+          <!--<option>Negro</option>-->
+          <option>Azul</option>
+          <!--<option>Gris</option>-->
+        </select>
+        <button onclick="finalizarCompra()">Finalizar Compra</button>
+      </div>
     </main>
 
     <script>
-        // Obtener parámetros de la URL
-        const params = new URLSearchParams(window.location.search);
-        document.getElementById('producto-nombre').innerText = params.get('nombre');
-        document.getElementById('producto-precio').innerText = "Precio: " + params.get('precio');
-        document.getElementById('producto-imagen').src = params.get('imagen');
+      // Obtener parámetros de la URL
+      const params = new URLSearchParams(window.location.search);
+      document.getElementById("producto-nombre").innerText =
+        params.get("nombre");
+      document.getElementById("producto-precio").innerText =
+        "Precio: " + params.get("precio");
+      document.getElementById("producto-imagen").src = params.get("imagen");
 
-        function finalizarCompra() {
-            alert("¡Compra finalizada!");
-        }
+      function finalizarCompra() {
+        alert("¡Compra finalizada!");
+      }
     </script>
-
-</body>
+  </body>
 </html>
